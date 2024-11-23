@@ -1,94 +1,26 @@
 import React from 'react'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from 'react-slick';
-import { FaFacebook} from "react-icons/fa";
-import { FaInstagram} from "react-icons/fa";
-import { FaTwitter} from "react-icons/fa";
-import { FaLinkedin} from "react-icons/fa";
-import { FaGithub} from "react-icons/fa";
+import Project from './Project';
+import Skills from './Skills';
+import { GrDownload } from "react-icons/gr";
+import { FiPhoneCall } from "react-icons/fi";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { IoLocationOutline } from "react-icons/io5";
+import { FaRegUser } from "react-icons/fa";
+import { RiUserStarLine } from "react-icons/ri";
+import Footer from './Footer';
+import { assets } from '../../public/assets';
+
 
 const HeroSection = () => {
-    const ProjectSlider = {
-        dots: false,
-        centerMode: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 2.7,
-        slidesToScroll: 1,
-        responsive: [
-            {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2.5,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
-            }
-            },
-            {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-            },
-            {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-        ]
-    }
-    const SkillsSlider = {
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 7,
-        slidesToScroll: 1,
-        responsive: [
-            {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
-            }
-            },
-            {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1
-            }
-            },
-            {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-        ]
-    }
   return (
     <>
-        <div className='pt-10'>
+        <div className='pt-10' id='about'>
             <div className='container'>
                 <div className='centerdiv'>
                     <div>
-                        <h1 className='text-2xl md:text-3xl lg:text-6xl xl:text-6xl text-white font-HeadingFont font-bold mb-3'>I am Yogesh Negi <br/> A Software Developer</h1>
-                        <p className='text-lg text-white'>Hello, I'm a proficient Software Developer specializing in JavaScript, React, and Next.js. With a keen eye for detail and a passion for crafting efficient solutions, he thrives in the dynamic world of web development, constantly pushing boundaries and delivering exceptional results.</p>
-                        <a className='whitebtn mt-5 inline-block font-HeadingFont' href=''>Download CV</a>
+                        <h1 className='text-2xl md:text-3xl lg:text-6xl xl:text-6xl text-white font-HeadingFont font-bold mb-3'>I am Yakshi Jakhmola <br/> A Web Designer</h1>
+                        <p className='text-lg text-white'>I am a skilled web designer with expertise in crafting visually stunning and user-friendly websites. My technical proficiency includes HTML, CSS, JavaScript, and React, allowing me to build dynamic and responsive web applications. I also have experience working with WordPress, enabling me to create and customize websites efficiently. creativity with technical expertise, I am dedicated to delivering designs that meet both client goals and user needs.</p>
+                        <a href={assets.CV} target='_blank' className='whitebtn mt-5 font-HeadingFont inline-flex items-center justify-between'><span>Download CV</span> <span><GrDownload /></span></a>
                     </div>
                     <div className='flex items-center justify-end'>
                         <img src='/hero.png'/>
@@ -96,80 +28,9 @@ const HeroSection = () => {
                 </div>
             </div>
         </div>
-        <div className='py-5 bg-lightblacktheme'>
-            <div className='container mx-auto'>
-                <div className='w-full'>
-                    <Slider {...SkillsSlider} className='w-full'>
-                        <div>
-                            <div className='mx-2 flex items-center justify-center'>
-                                <img src='/html.png' className='w-20 invert'/>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='mx-2 flex items-center justify-center'>
-                                <img src='/html.png' className='w-20 invert'/>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='mx-2 flex items-center justify-center'>
-                                <img src='/html.png' className='w-20 invert'/>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='mx-2 flex items-center justify-center'>
-                                <img src='/html.png' className='w-20 invert'/>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='mx-2 flex items-center justify-center'>
-                                <img src='/html.png' className='w-20 invert'/>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='mx-2 flex items-center justify-center'>
-                                <img src='/html.png' className='w-20 invert'/>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='mx-2 flex items-center justify-center'>
-                                <img src='/html.png' className='w-20 invert'/>
-                            </div>
-                        </div>
-                    </Slider>
-                </div>
-            </div>
-        </div>
-        <div className='pt-10'>
-            <div className='container'>
-                <h2 className='text-xl xl:text-5xl lg:text-5xl md:text-3xl text-whitetheme font-bold font-HeadingFont text-right'>Client's get always exceptional <br/> works from me...</h2>
-                <div className='w-full mt-10'>
-                    <div className='w-full xl:w-3/12 lg:w-3/12'></div>
-                    <Slider {...ProjectSlider} className='w-full xl:w-9/12 lg:w-9/12'>
-                        <div>
-                            <div className='mx-3'>
-                                <img src='/project1.webp' className='rounded-xl shadow-xl'/>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='mx-3'>
-                                <img src='/project1.webp' className='rounded-xl shadow-xl'/>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='mx-3'>
-                                <img src='/project1.webp' className='rounded-xl shadow-xl'/>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='mx-3'>
-                                <img src='/project1.webp' className='rounded-xl shadow-xl'/>
-                            </div>
-                        </div>
-                    </Slider>
-                </div>
-            </div>
-        </div>
-        <div className='pt-10'>
+        <Skills/>
+        <Project/>
+        <div className='pt-10' id='contact'>
             <div className='container'>
                 <div className='w-full flex items-start gap-10 flex-wrap xl:flex-nowrap lg:flex-nowrap'>
                     <div className='w-full md:w-full xl:w-5/12 lg:w-5/12'>
@@ -195,47 +56,47 @@ const HeroSection = () => {
                         <div className='mt-7'>
                             <div className='flex items-start space-x-5 border-b-solid border-b-white-theme border-b-2 py-4'>
                                 <div>
-                                    <h6 className='text-white font-bold'>2024 - Present</h6>
+                                    <h6 className='text-white text-3xl'><FiPhoneCall/></h6>
                                 </div>
                                 <div>
-                                    <h6 className='text-white font-bold text-xl'>Product Designner</h6>
-                                    <p className='text-lg text-white mt-1'>In publishing and graphic design, Lorem ipsum is a placeholder text</p>
-                                </div>
-                            </div>
-                            <div className='flex items-start space-x-5 border-b-solid border-b-white-theme border-b-2 py-4'>
-                                <div>
-                                    <h6 className='text-white font-bold'>2024 - Present</h6>
-                                </div>
-                                <div>
-                                    <h6 className='text-white font-bold text-xl'>Product Designner</h6>
-                                    <p className='text-lg text-white mt-1'>In publishing and graphic design, Lorem ipsum is a placeholder text</p>
+                                    <h6 className='text-white font-bold text-xl'>Phone Number</h6>
+                                    <p className=' text-white mt-1'>8588906090</p>
                                 </div>
                             </div>
                             <div className='flex items-start space-x-5 border-b-solid border-b-white-theme border-b-2 py-4'>
                                 <div>
-                                    <h6 className='text-white font-bold'>2024 - Present</h6>
+                                    <h6 className='text-white text-3xl'><MdOutlineMailOutline/></h6>
                                 </div>
                                 <div>
-                                    <h6 className='text-white font-bold text-xl'>Product Designner</h6>
-                                    <p className='text-lg text-white mt-1'>In publishing and graphic design, Lorem ipsum is a placeholder text</p>
+                                    <h6 className='text-white font-bold text-xl'>Email Id</h6>
+                                    <p className=' text-white mt-1'>jakhmolayakshi12@gmail.com</p>
                                 </div>
                             </div>
                             <div className='flex items-start space-x-5 border-b-solid border-b-white-theme border-b-2 py-4'>
                                 <div>
-                                    <h6 className='text-white font-bold'>2024 - Present</h6>
+                                    <h6 className='text-white text-3xl'><IoLocationOutline/></h6>
                                 </div>
                                 <div>
-                                    <h6 className='text-white font-bold text-xl'>Product Designner</h6>
-                                    <p className='text-lg text-white mt-1'>In publishing and graphic design, Lorem ipsum is a placeholder text</p>
+                                    <h6 className='text-white font-bold text-xl'>Address</h6>
+                                    <p className=' text-white mt-1'>Currently Living in Faridabad</p>
+                                </div>
+                            </div>
+                            <div className='flex items-start space-x-5 border-b-solid border-b-white-theme border-b-2 py-4'>
+                                <div>
+                                    <h6 className='text-white text-3xl'><FaRegUser/></h6>
+                                </div>
+                                <div>
+                                    <h6 className='text-white font-bold text-xl'>Working Position</h6>
+                                    <p className=' text-white mt-1'>Web Designer</p>
                                 </div>
                             </div>
                             <div className='flex items-start space-x-5 border-b-solid py-4'>
                                 <div>
-                                    <h6 className='text-white font-bold'>2024 - Present</h6>
+                                    <h6 className='text-white text-3xl'><RiUserStarLine/></h6>
                                 </div>
                                 <div>
-                                    <h6 className='text-white font-bold text-xl'>Product Designner</h6>
-                                    <p className='text-lg text-white mt-1'>In publishing and graphic design, Lorem ipsum is a placeholder text</p>
+                                    <h6 className='text-white font-bold text-xl'>Experience</h6>
+                                    <p className=' text-white mt-1'>2 yr</p>
                                 </div>
                             </div>
                         </div>
@@ -243,22 +104,7 @@ const HeroSection = () => {
                 </div>
             </div>
         </div>
-        <div className='py-5 bg-lightblacktheme shadow-2xl'>
-            <div className='container'>
-                <div className='flex items-center justify-center xl:justify-between lg:justify-between flex-wrap xl:flex-nowrap lg:flex-nowrap'>
-                    <div>
-                        <p className='text-whitetheme'>Copy Right All Reserved by Yogesh Negi</p>
-                    </div>
-                    <div className='grid grid-cols-5 grid-rows-1 gap-x-5 mt-5 xl:mt-0'>
-                        <FaFacebook className='iconstyle'/>
-                        <FaInstagram className='iconstyle'/>
-                        <FaTwitter className='iconstyle'/>
-                        <FaLinkedin className='iconstyle'/>
-                        <FaGithub className='iconstyle'/>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Footer/>
     </>
   )
 }

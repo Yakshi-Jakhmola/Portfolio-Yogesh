@@ -28,6 +28,12 @@
         @apply bg-transparent border-whitetheme border-solid border w-full py-8 px-5 rounded-lg text-whitetheme focus:outline-none focus:border-whitetheme
     }
     .iconstyle{
-        @apply text-white w-12 h-12 p-2 rounded-full border-blacktheme border-solid border text-center
+        @apply text-white w-10 h-10 p-3 rounded-full border-blacktheme border-solid border text-center
+    }
+    .mobile-menu{
+        @apply bg-lightblacktheme fixed top-0 -left-full h-screen w-80 z-50 p-5 ease-in transition-all duration-700
+    }
+    .activemobile{
+        @apply left-0
     }
 }
